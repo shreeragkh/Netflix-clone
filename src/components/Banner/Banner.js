@@ -1,16 +1,34 @@
-import React from 'react'
+import React,{useEffect, useState} from 'react'
+import axios from 'axios'
 import './Banner.css'
+import { ACCESS_TOKEN, baseUrl, imageUrl} from '../../utils/api'
+
 
 function Banner() {
+  const [movie, setmovie] = useState()
+  useEffect(() => {
+    axios.get(`${baseUrl}/trending/movie/day?language=en-US` , {
+      headers: {
+        Authorization: `Bearer ${ACCESS_TOKEN}`,
+        Accept: 'application/json',
+      },}).then((Response)=>{
+        const movie=Response.data.results
+        if (movie.length>0){
+          const randomIndex=Math.floor(Math.random()*movie.length)
+          setmovie(movie[randomIndex]);
+        }
+    })
+  }, [])
+  
   return (
-    <div className='banner'>
+    <div style={{backgroundImage:`url(${movie ? imageUrl + movie.backdrop_path : ""})`}} className='banner'>
       <div className='content'>
-        <h1 className='title'>Movie name</h1>
-        <div banner_buttons>
+        <h1 className='title'>{movie ? movie.title: ""}</h1>
+        <div className='banner_buttons'>
             <button className='button'>Play</button>
             <button className='button'>My List</button>
         </div>
-        <h1 className='description'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</h1>
+        <h1 className='description'>{movie ? movie.overview: ""}</h1>
       </div>
       <div className="fade_buttom"></div>
     </div>
