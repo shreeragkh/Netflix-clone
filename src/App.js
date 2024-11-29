@@ -10,7 +10,9 @@ function App() {
     <div className="App">
       <Navbar/>
       <Banner/>
-      <RowPost/>
+      <RowPost title='Trending'/>
+      <RowPost title='Actions' genreId={28} small/>
+      <RowPost title='Romance' genreId={10749} small/>
     </div>
   );
 }
