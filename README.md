@@ -17,8 +17,8 @@ Make sure you have the following things:
 
 ## **Clone the repository:**
 
-```git  clone https://github.com/shreeragkh/Netflix-clone.git```
-```cd netflix-clone```
+- ```git  clone https://github.com/shreeragkh/Netflix-clone.git```
+- ```cd netflix-clone```
 
 ## Install the dependencies
 
