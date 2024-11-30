@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# Netflix clone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is sample netflix clone build with React. It fetches data from the TMDB API to display trending movies, genres, and movie trailers.
 
-## Available Scripts
+## Getting started
 
-In the project directory, you can run:
+Follow these instructions to get a copy of the project up and running on your local machine.
 
-### `npm start`
+## Prerequisites
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Make sure you have the following things:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Node.js
+- npm (Node Package Manager)
+- TMDB API key
+- TMDB ACCESS TOKEN AUTH(same as API Read Access Token)
 
-### `npm test`
+## **Clone the repository:**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+git  clone https://github.com/shreeragkh/Netflix-clone.git
+cd netflix-clone
 
-### `npm run build`
+## Install the dependencies
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+'''npm i axios'''
+'''npm i react-youtube'''
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Get your TMDB API Key and ACCESS TOKEN AUTH
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+By signing up in the '''https://www.themoviedb.org/''' you would get your API KEY and ACCESS TOKEN AUTH
 
-### `npm run eject`
+## Adding anvironment variable into .env file
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Create a .env file and add those API KEY and ACCESS TOKEN AUTH in .env file. Make sure to create .env file in root directory and add the store the KEY's in this format:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+'''REACT_APP_ACCESS_TOKEN={YOUR _TMDB_ACCESS_TOKEN}'''
+'''REACT_APP_API_KEY={YOUR_TMDB_API_KEY}'''
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Running the Project
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+'''npm start'''
 
-## Learn More
+Open your browser and navigate to:
+'''http://localhost:3000'''
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Now you can see the Netflix-clone Running your browser
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Contributing
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Contributions and code improvements are welcome! If you have any suggestions or improvements, feel free to create a pull request or open an issue.
